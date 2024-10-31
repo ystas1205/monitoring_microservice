@@ -7,4 +7,4 @@ def validate(schema_class, json_data):
     except pydantic.ValidationError as er:
         error = er.errors()[0]
         error.pop("ctx", None)
-        raise HttpError(400, error)
+        raise HttpError(400, error )
